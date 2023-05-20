@@ -1,0 +1,239 @@
+:root{
+    --logo_background: #92CCCD;
+  --nav_background: #31343D;
+  --font-color:#465A79;
+}
+
+
+/* Properties for all */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+#navigation{
+    background-color: var(--nav_background);
+    padding:1rem 2rem 1rem 0rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo-box{
+    background-color: var(--logo_background);
+    padding:1.5rem;
+    width: 250px;
+    text-align: right;
+    font-size: 28px;
+}
+
+#navigation nav ul{
+    display: flex;
+}
+#navigation nav ul li{
+    margin:0 0.5rem; 
+    padding:1rem;
+    border-bottom: 3px solid var(--logo_background);
+}
+#navigation nav ul li a{
+    color:var(--logo_background);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#subtitles{
+    max-height: 200px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+#subtitles img{
+    width: 100%;
+}
+
+#subtitles #subtitle-box{
+    background-color: var(--logo_background);
+    color:var(--font-color);
+    font-size: 28px;
+    position: absolute;
+    margin-bottom: 2%;
+    margin-right: 2%;
+}
+
+.body_section{
+    margin:3rem 0;
+    display: flex;
+}
+
+.section_name{
+    font-size: 62px;
+    text-align: right;
+    color:var(--font-color);
+    border-right: 0.4rem solid var(--font-color);
+    padding:0.5rem;
+    width: 30%;
+}
+
+
+.content_container{
+    flex:70%;
+    padding:0 4rem;
+}
+#about_me_content{
+    font-size: 24px;
+    color:var(--font-color);
+    /* padding:1rem; */
+}
+.work_content_container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.work_content{
+    width: 100%;
+    border:0.5rem solid var(--logo_background);
+    flex: 40%;
+    justify-content: space-between;
+    margin:1rem;
+}
+
+.work_content:hover{
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(226,241,40,1) 100%, rgba(0,212,255,1) 100%);
+}
+
+.content_image{
+    width:100%;
+    height: 100%;
+    opacity: 0.5;
+}
+
+.work_content #work_title{
+    color:var(--font-color);
+    position: absolute;
+    margin-top: -7%;
+    background-color: var(--logo_background);
+    padding: 1rem 1rem 1rem 2rem;
+    text-align: right;
+}
+
+.work_content #work_title h3{
+    font-size:24px;
+}
+.work_content #work_title p{
+    font-size:16px;
+    margin-top: 5px;
+}
+#contact_me .content_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+#contact_me .content_container ul{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+#contact_me .content_container li{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.5rem solid var(--font-color);
+    padding:0.5rem;
+}
+#contact_me .content_container li a{
+    color:var(--nav_background);
+    font-size: 28px;
+}
+
+@media only screen and (max-width: 1024px) {
+    #navigation {
+      padding: 0.8rem 1rem 0.8rem 0rem;
+    }
+
+    #logo-box{
+        padding:0.6rem;
+        font-size: 24px;
+    }
+
+    #navigation nav ul li{
+        padding:0 1rem;
+    }
+
+    .work_content #work_title{
+     margin-top: -7%;   
+     padding: 0.5rem 1rem 0.5rem 2rem;
+    }
+    .work_content #work_title h3{
+        font-size:18px;
+    }
+    #contact_me .content_container li a{
+        font-size: 24px;
+    }
+  }
+  @media only screen and (max-width: 780px){
+    #navigation nav ul li a{
+        font-size: 18px;
+    }
+  }
+  @media only screen and (max-width: 450px){
+    #navigation{
+        flex-direction: column;
+    }
+    #logo-box{
+        text-align: center;
+    }
+
+    #navigation nav ul{
+        flex-direction: column;
+    }
+
+    #navigation nav ul li{
+        margin:0; 
+        padding:1rem;
+    }
+
+    .body_section{
+        flex-direction: column;
+    }
+    #Secondary_work_content{
+        display: flex;
+        flex-direction: column;
+    }
+    .section_name{
+        width: 100%;
+        font-size: 48px;
+        text-align: left;
+        color:var(--font-color);
+        border-right: none;
+        border-bottom: 0.4rem solid var(--font-color);
+        padding-left: 1.5rem;
+    }
+
+    .content_container{
+        padding: 1rem 1rem;
+    }
+
+    .work_content #work_title{
+        margin-top: -20%;   
+        padding: 0.5rem 1rem 0.5rem 2rem;
+       }
+       .work_content #work_title h3{
+           font-size:18px;
+       }
+       #contact_me .content_container ul{
+        flex-direction: column;
+    }
+    #contact_me .content_container ul li{
+        margin: 1rem 0;
+       }
+
+       .work_content{
+        width: fit-content;
+       }
+  }
+
+
